@@ -1,0 +1,24 @@
+Seleksi Elemen HTML:
+Pertama-tama, kode tersebut menggunakan metode document.querySelectorAll dan document.querySelector untuk memilih elemen-elemen HTML dengan atribut tertentu. Elemen-elemen ini akan digunakan untuk menghubungkan aksi-aksi seperti mengklik tombol angka, tombol operasi, tombol sama dengan, tombol hapus, dan tombol reset dalam kalkulator.
+
+Kelas Calculator:
+Kode ini mendefinisikan kelas Calculator dengan berbagai metode yang mengatur perilaku kalkulator.
+
+Metode constructor digunakan untuk menginisialisasi kalkulator dengan menghubungkan elemen-elemen HTML dan mengosongkan operand saat kalkulator dimulai.
+Metode clear digunakan untuk mengosongkan operand saat ini, operand sebelumnya, dan operasi yang dipilih.
+Metode delete menghapus satu digit dari operand saat ini.
+Metode appendNumber menambahkan angka ke operand saat ini. Namun, sebelum menambahkan angka, ini memeriksa apakah tanda desimal (titik) sudah ada dalam operand saat ini.
+Metode chooseOperation digunakan untuk memilih operasi matematika. Jika operand saat ini kosong, tidak ada tindakan yang diambil. Jika ada operand sebelumnya, kalkulator akan menghitung hasil dari operasi sebelumnya dan mengatur operasi yang dipilih.
+Metode compute menghitung hasil dari operasi matematika yang dipilih. Ini menggunakan nilai operand sebelumnya dan operand saat ini serta operasi yang dipilih untuk melakukan perhitungan.
+Metode getDisplayNumber mengambil angka sebagai masukan dan mengembalikan representasi yang diformat untuk ditampilkan di layar kalkulator.
+Metode updateDisplay mengatur teks di elemen-elemen HTML yang menampilkan operand saat ini dan operand sebelumnya serta operasi yang dipilih.
+Inisialisasi Kalkulator:
+Sebuah objek calculator dari kelas Calculator dibuat dengan menghubungkan elemen-elemen HTML yang telah diambil sebelumnya.
+
+Event Listeners:
+Menggunakan perulangan forEach, event listeners ditambahkan pada tombol-tombol angka dan operasi. Ketika tombol angka diklik, metode appendNumber dipanggil, dan ketika tombol operasi diklik, metode chooseOperation dipanggil. Tombol sama dengan memicu metode compute, tombol reset memicu metode clear, dan tombol hapus memicu metode delete.
+
+Pembaruan Tampilan:
+Setiap kali ada tindakan yang mempengaruhi operand atau operasi, metode updateDisplay dipanggil untuk memperbarui tampilan di elemen-elemen HTML yang menampilkan operand.
+
+Jadi, kode ini bekerja dengan cara menghubungkan tombol-tombol dan elemen-elemen HTML terkait untuk membuat fungsi dasar dari kalkulator, termasuk menambahkan angka, memilih operasi, menghitung hasil, menghapus digit, dan mereset kalkulator.
